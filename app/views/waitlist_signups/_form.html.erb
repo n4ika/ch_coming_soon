@@ -1,0 +1,14 @@
+<% target_id = "#{role}_waitlist_form" %>
+<% is_pro = role == "professional" %>
+
+<div id="<%= target_id %>">
+  <%= form_with model: waitlist_signup, url: waitlist_signups_path, class: (is_pro ? "pro-form" : "hero-form") do |f| %>
+    <%= f.hidden_field :role, value: role %>
+    <%= f.email_field :email, placeholder: "you@email.com", required: true, "aria-label": "Email address" %>
+    <%= f.submit "Notify me", class: "btn #{is_pro ? 'btn-premium' : 'btn-primary'}" %>
+  <% end %>
+
+  <% if waitlist_signup.errors.any? %>
+    <p class="form-error"><%= waitlist_signup.errors.full_messages.to_sentence %></p>
+  <% end %>
+</div>

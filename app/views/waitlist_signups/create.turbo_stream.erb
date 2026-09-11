@@ -1,0 +1,17 @@
+<% target_id = "#{@role}_waitlist_form" %>
+
+<% if @success %>
+  <%= turbo_stream.replace target_id do %>
+    <div id="<%= target_id %>"
+         class="waitlist-confirm <%= "on-dark" if @role == "professional" %>"
+         data-controller="klaviyo-identify"
+         data-klaviyo-identify-email-value="<%= @email %>">
+      <span class="waitlist-confirm-check">✓</span>
+      You're on the list — we'll email <strong><%= @email %></strong> the moment we launch.
+    </div>
+  <% end %>
+<% else %>
+  <%= turbo_stream.replace target_id do %>
+    <%= render "waitlist_signups/form", waitlist_signup: @waitlist_signup, role: @role %>
+  <% end %>
+<% end %>
