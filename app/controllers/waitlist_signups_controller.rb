@@ -32,6 +32,6 @@ class WaitlistSignupsController < ApplicationController
   private
 
   def waitlist_signup_params
-    params.require(:waitlist_signup).permit(:email, :role)
+    params.require(:waitlist_signup_form).permit(:email, :role)
   end
 end
