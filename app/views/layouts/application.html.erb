@@ -29,6 +29,18 @@
   </head>
 
   <body>
+    <% if notice %>
+      <div class="flash flash-notice" role="status">
+        <span class="flash-icon" aria-hidden="true">&#10003;</span>
+        <span><%= notice %></span>
+      </div>
+    <% end %>
+    <% if alert %>
+      <div class="flash flash-alert" role="alert">
+        <span class="flash-icon" aria-hidden="true">&#33;</span>
+        <span><%= alert %></span>
+      </div>
+    <% end %>
     <%= yield %>
   </body>
 </html>

@@ -123,6 +123,19 @@ h1{
 .waitlist-confirm.on-dark .waitlist-confirm-check{ color:var(--metallic); }
 .form-error{ font-size:12px; color:#B3261E; margin-top:8px; }
 
+.flash{
+  display:flex; align-items:center; gap:10px; padding:14px 48px; font-size:13.5px; font-weight:600;
+  line-height:1.5; border-bottom:1px solid var(--border-light);
+}
+.flash-icon{
+  width:18px; height:18px; border-radius:50%; flex-shrink:0; font-size:11px; font-weight:700;
+  display:inline-flex; align-items:center; justify-content:center;
+}
+.flash-notice{ background:var(--card); color:var(--ink); }
+.flash-notice .flash-icon{ background:var(--honey); color:var(--ink); }
+.flash-alert{ background:#FBEAE8; color:#7A2119; border-bottom-color:#F1C9C3; }
+.flash-alert .flash-icon{ background:#B3261E; color:#FBEAE8; }
+
 footer{
   background:var(--page-dark); border-top:1px solid var(--border-dark); padding:36px 48px;
   display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px;
@@ -142,6 +155,7 @@ footer{
   section{ padding:56px 24px; }
   .hero-form{ flex-direction:column; max-width:100%; }
   h1{ font-size:30px; }
+  .flash{ padding:12px 24px; }
 }
 
 /* ============ PRIVACY POLICY PAGE ============ */
