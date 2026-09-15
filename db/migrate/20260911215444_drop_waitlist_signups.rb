@@ -9,6 +9,6 @@ class DropWaitlistSignups < ActiveRecord::Migration[8.1]
       t.integer :role,  null: false, default: 0
       t.timestamps
     end
-    add_index :waitlist_signups, [:email, :role], unique: true
+    add_index :waitlist_signups, [ :email, :role ], unique: true
   end
 end
