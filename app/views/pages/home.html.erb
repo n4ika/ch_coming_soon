@@ -31,7 +31,14 @@
   </div>
 
   <div class="mascot-showcase">
-      <%= image_tag "Neutral_Hero_Image.png", class: "mascot-large", alt: "ChairHop mascot" %>
+    <%= image_tag "Neutral_Hero_Image.png",
+          class: "mascot-large",
+          alt: "ChairHop Image",
+          data: {
+            "geo-hero-target": "image",
+            "ca-src": asset_path("Canada_Hero_Image.png"),
+            "us-src": asset_path("SoFlo_Hero_Image.png")
+          } %>
   </div>
 </section>
 
