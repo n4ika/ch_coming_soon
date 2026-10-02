@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 8.1.1"
+gem "rails", "~> 8.1.4"
 # Pin below 3.0: json 3.0 made JSON.parse's second argument keyword-only,
 # which breaks ActiveSupport::JSON.decode (activesupport still calls
 # JSON.parse(source, options_hash) positionally). That mismatch raises
