@@ -8,7 +8,7 @@ gem "rails", "~> 8.1.1"
 # "wrong number of arguments (given 2, expected 1)" specifically when Rails
 # decrypts an incoming session/CSRF cookie via ActiveSupport::MessageEncryptor,
 # which is why it looked intermittent and got blamed on unrelated view lines.
-gem "json", "< 3"
+gem "json", "< 4"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
 gem "propshaft"
 # Use sqlite3 as the database for Active Record
